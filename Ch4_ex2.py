@@ -14,6 +14,9 @@ for line in exons:
 	stop = int(positions[1])
 	exon = genomic_dna[start:stop]
 	sequence = sequence + exon
-	#print the output of for loop
-	print("coding sequence is : " + sequence)
+
+#write the coding sequence to an output file
+output = open("coding_sequence.txt","w")
+output.write(sequence)
+output.close()
 
